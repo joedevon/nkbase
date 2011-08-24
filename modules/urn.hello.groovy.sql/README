@@ -9,4 +9,4 @@ and you should get a list of tables in your 'test' database, which you MUST crea
 
 *NOTE: I got my JDBC connector and stuck it in /etc/lib from here:
 http://www.mysql.com/downloads/connector/j/
-and you need to do the same.
+and you MUST do the same.
