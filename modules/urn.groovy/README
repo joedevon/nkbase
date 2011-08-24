@@ -4,3 +4,12 @@ http://localhost:8080/hello_groovy/dynamite
 and you should see the text dynamically generated in:
 
 /path/to/modules/urn.groovy/resources/endpoints/example.gy
+
+Please note the meaning of
+	<system>
+		<dynamic />
+	</system>
+	
+is explained here:
+
+http://localhost:1060/book/view/book:guide:logicalreference/doc:logicalreference:module:standard:logical
