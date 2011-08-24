@@ -44,6 +44,10 @@
 			<fileset>
 			       <regex>res:/etc/ConfigRDBMS.xml</regex>
 			</fileset>
+			<import>
+				<uri>urn:org:netkernel:mod:db</uri>
+			</import>
+
             <import>
                <uri>urn:org:netkernel:lang:groovy</uri>
             </import>
