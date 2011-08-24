@@ -1,0 +1,5 @@
+I will be creating some modules to do basic stuff. This will be a great reminder for me and hopefully a good starting point for you.
+
+I'm going to create a directory called 'modules'. Stick these modules there in addition to what you already have...
+
+DON'T FORGET to add the module(s) to /path/to/netkernel-root/modules.xml !!!
