@@ -4,3 +4,7 @@ http://localhost:8080/hello_groovy_sql/
 and you should get a success message generated in:
 
 /path/to/modules/urn.hello.groovy.sql/resources/endpoints/example.gy
+
+*NOTE: I got my JDBC connector and stuck it in /etc/lib from here:
+http://www.mysql.com/downloads/connector/j/
+and you need to do the same.
