@@ -1,4 +1,6 @@
-Go to: 
+Go to /path/to/urn.hello.groovy.sql/etc/ConfigRDBMS.xml and put your database credentials there: 
+
+Then to:
 http://localhost:8080/hello_groovy_sql/
 
 and you should get a list of tables in your 'test' database, which you MUST create first, generated in:
