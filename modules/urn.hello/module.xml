@@ -19,7 +19,7 @@
          <regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
       </fileset>
       <fileset><!--Icon-->
-         <regex>res:/hello/pub/(.*)</regex>
+         <regex>res:/hello/(.*)</regex>
          <rewrite>res:/resources/pub/$1.txt</rewrite>
       </fileset>
    </rootspace>
