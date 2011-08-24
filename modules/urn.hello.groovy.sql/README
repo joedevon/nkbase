@@ -1,9 +1,9 @@
 Go to: 
 http://localhost:8080/hello_groovy_sql/
 
-and you should get a success message generated in:
+and you should get a list of tables in your 'test' database, which you MUST create first, generated in:
 
-/path/to/modules/urn.hello.groovy.sql/resources/endpoints/example.gy
+/path/to/modules/urn.hello.groovy.sql/resources/endpoints/sql.gy
 
 *NOTE: I got my JDBC connector and stuck it in /etc/lib from here:
 http://www.mysql.com/downloads/connector/j/
