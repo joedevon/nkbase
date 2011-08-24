@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="2.0">
+   <meta>
+      <identity>
+         <uri>urn:hello</uri>
+         <version>1.0.0</version>
+      </identity>
+      <info>
+         <name>Hello World</name>
+         <description>A regular text file with hello world inside</description>
+         <icon>res:/hello/pub/icon.png</icon>
+      </info>
+   </meta>
+   <system>
+      <dynamic/>
+   </system>
+   <rootspace name="Hello World - Development Space" uri="urn:hello">
+      <fileset>
+         <regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+      </fileset>
+      <fileset><!--Icon-->
+         <regex>res:/hello/pub/(.*)</regex>
+         <rewrite>res:/resources/pub/$1</rewrite>
+      </fileset>
+   </rootspace>
+</module>
