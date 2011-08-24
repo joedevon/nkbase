@@ -1,0 +1,9 @@
+<config>
+<rdbms>
+       <jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
+       <jdbcConnection>jdbc:mysql://localhost:3306/test</jdbcConnection>
+       <poolSize>8</poolSize>
+       <defaultQueryTimeout>5000</defaultQueryTimeout>
+       <user>root</user>
+</rdbms>
+</config>
