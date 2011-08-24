@@ -20,7 +20,7 @@
       </fileset>
       <fileset><!--Icon-->
          <regex>res:/hello/pub/(.*)</regex>
-         <rewrite>res:/resources/pub/$1</rewrite>
+         <rewrite>res:/resources/pub/$1.txt</rewrite>
       </fileset>
    </rootspace>
 </module>
