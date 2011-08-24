@@ -1,4 +1,4 @@
-Go to /path/to/urn.hello.groovy.sql/etc/ConfigRDBMS.xml and put your database credentials there: 
+Go to /path/to/urn.hello.groovy.sql/etc/ConfigRDBMS.xml and put your database credentials there.
 
 Then to:
 http://localhost:8080/hello_groovy_sql/
