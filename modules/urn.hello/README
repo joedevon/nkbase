@@ -1,0 +1,8 @@
+Go to: 
+http://localhost:8080/hello/world 
+
+and you should see the text in:
+
+/path/to/modules/urn.hello/resources/pub/world.txt
+
+Very simple regex maps the last part of the url to the filesystem.
