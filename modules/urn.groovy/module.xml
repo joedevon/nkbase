@@ -44,9 +44,6 @@
             <import>
                <uri>urn:org:netkernel:lang:groovy</uri>
             </import>
-            <import><!-- import Freemarker module (used by example) -->
-               <uri>urn:org:netkernel:lang:freemarker</uri>
-            </import>
          </space>
       </mapper>
       <fileset><!--Icon-->
