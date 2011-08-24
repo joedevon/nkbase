@@ -1,0 +1,4 @@
+req=context.createRequest("active:sqlQuery")
+req.addArgumentByValue("operand", "SHOW TABLES;");
+result=context.issueRequest(req);
+context.createResponseFrom(result);
