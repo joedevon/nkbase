@@ -5,7 +5,7 @@ and you should see the text dynamically generated in:
 
 /path/to/modules/urn.groovy/resources/endpoints/example.gy
 
-Please note the meaning of
+* Please note the meaning of
 	<system>
 		<dynamic />
 	</system>
@@ -14,4 +14,5 @@ is explained here:
 
 http://localhost:1060/book/view/book:guide:logicalreference/doc:logicalreference:module:standard:logical
 
-NOTE: I have no clue (yet) what FREEMARKER does...but clearly it doesn't work without it ;)
+*NOTE: I have no clue (yet) what FREEMARKER does...but clearly it doesn't work without it ;)
+*NOTE: The end of the groovy script is logging the input value. Some very cool AOP in Netkernel!
