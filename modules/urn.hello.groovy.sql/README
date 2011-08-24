@@ -1,0 +1,6 @@
+Go to: 
+http://localhost:8080/hello_groovy_sql/
+
+and you should get a success message generated in:
+
+/path/to/modules/urn.hello.groovy.sql/resources/endpoints/example.gy
