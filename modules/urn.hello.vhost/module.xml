@@ -38,7 +38,7 @@
 					<config>
 
 						<host>
-    						<grammar>hello-vhost.com
+    						<grammar>http://hello-vhost.com
 								<group name="path"><regex>.*</regex></group>
 							</grammar>
 							<request>
@@ -85,13 +85,13 @@
 			<uri>urn:org:netkernel:xml:core</uri>
 		</import>
 	</rootspace>
-	<rootspace name="vhost space" public="true">
 
+	<rootspace name="vhost space" public="true">
 		<mapper>
 			<config>
 				<endpoint>
 					<grammar><regex>res:/?</regex></grammar>
-					<request><identifier>res:/hello-vhost.com/index.html</identifier></request>
+					<request><identifier>res:index.html</identifier></request>
 				</endpoint>
 			</config>
 		</mapper>
