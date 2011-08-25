@@ -88,7 +88,8 @@
 			</config>
 			<space>
 				<fileset>
-					<glob>vhost/*</glob>
+<!--					<glob>vhost/*</glob> -->
+					<glob>*</glob>
 				</fileset>
 			</space>
 		</mapper>
