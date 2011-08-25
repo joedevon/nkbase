@@ -30,7 +30,7 @@
     <Arg>
       <New class="org.eclipse.jetty.server.nio.SelectChannelConnector">
         <Set name="port">
-        	<!-- SystemProperty name="netkernel.http.backend.port" default="8081" /-->
+        	<SystemProperty name="netkernel.http.backend.port" default="8081" />
         </Set>
         <Set name="host">
 			<SystemProperty name="netkernel.http.backend.host" default="0.0.0.0" />
