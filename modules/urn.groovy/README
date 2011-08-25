@@ -14,5 +14,4 @@ is explained here:
 
 http://localhost:1060/book/view/book:guide:logicalreference/doc:logicalreference:module:standard:logical
 
-*NOTE: I have no clue (yet) what FREEMARKER does...but clearly it doesn't work without it ;)
 *NOTE: The end of the groovy script is logging the input value. Some very cool AOP in Netkernel!
