@@ -36,22 +36,21 @@
 				<overlay>
 					<prototype>VirtualHost</prototype>
 					<config>
-						
-						<!-- 1st host! -->
+
 						<host>
     						<grammar>hello-vhost.com
 								<group name="path"><regex>.*</regex></group>
 							</grammar>
 							<request>
 								<identifier>res:[[arg:path]]</identifier>
-								<representation>org.netkernel.layer0.representation.IBinaryStreamRepresentation</representation>
+									<representation>org.netkernel.layer0.representation.IBinaryStreamRepresentation</representation>
 							</request>
 							<import-type>vhost</import-type>
-						</host>	
+						</host>
 
 					</config>
 				</overlay>
-				
+
 				<!-- fallback 404 for all other domains (if they get through) -->
 				<mapper>
 					<config>
@@ -67,10 +66,10 @@
 						</fileset>
 					</space>
 				</mapper>
-				
+
 			</space>
 		</overlay>
-		
+
 		<!-- import HTTP module so that transport prototype is available -->
 		<import>
 			<uri>urn:org:netkernel:tpt:http</uri>
@@ -87,14 +86,7 @@
 		</import>
 	</rootspace>
 	<rootspace name="vhost space" public="true">
-		
-		<!-- specify hook to make this space used by virtual host 1 -->
-		<fileset>
-			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
-			<rewrite>res:/etc/system/SimpleDynamicImportHook.xml</rewrite>
-		</fileset>
-		
-		<!-- other resource exposed in host 1 here -->
+
 		<mapper>
 			<config>
 				<endpoint>
@@ -103,7 +95,7 @@
 				</endpoint>
 			</config>
 		</mapper>
-		
+
 	</rootspace>
-	
+
 </module>
