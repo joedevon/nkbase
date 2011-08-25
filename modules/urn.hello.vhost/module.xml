@@ -91,7 +91,7 @@
 		<!-- specify hook to make this space used by virtual host 1 -->
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
-			<rewrite>res:/vhost1/SimpleDynamicImportHook.xml</rewrite>
+			<rewrite>res:/etc/system/SimpleDynamicImportHook.xml</rewrite>
 		</fileset>
 		
 		<!-- other resource exposed in host 1 here -->
