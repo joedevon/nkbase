@@ -89,7 +89,7 @@
 			<space>
 				<fileset>
 <!--					<glob>vhost/*</glob> -->
-					<glob>*</glob>
+					<glob>/*</glob>
 				</fileset>
 			</space>
 		</mapper>
