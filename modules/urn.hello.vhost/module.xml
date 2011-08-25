@@ -71,7 +71,6 @@
 	</rootspace>
 
 	<rootspace name="vhost space" public="true">
-		<!-- specify hook to make this space used by virtual host 1 -->
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
@@ -81,7 +80,6 @@
 				<endpoint>
 					<grammar><regex>res:/?</regex></grammar>
 					<request><identifier>res:/vhost/index.html</identifier></request>
-
 				</endpoint>
 			</config>
 			<space>
@@ -90,7 +88,6 @@
 				</fileset>
 			</space>
 		</mapper>
-
 	</rootspace>
 
 </module>
