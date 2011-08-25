@@ -3,3 +3,7 @@ I will be creating some modules to do basic stuff. This will be a great reminder
 I'm going to create a directory called 'modules'. Stick these modules there in addition to what you already have...
 
 DON'T FORGET to add the module(s) to /path/to/netkernel-root/modules.xml !!!
+
+@TODO set up the 404 page.
+@TODO set up something to trap exceptions in production (only, I hope!)...and send that to a 500 page.
+@TODO set up a subdomain (might make it a new module though)
