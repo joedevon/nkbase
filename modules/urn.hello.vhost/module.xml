@@ -63,7 +63,7 @@
 					</config>
 					<space name="Fallback Host Space">
 						<fileset>
-							<glob>notfound.html</glob>
+							<glob>404.html</glob>
 						</fileset>
 					</space>
 				</mapper>
