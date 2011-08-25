@@ -61,7 +61,6 @@
 		<import>
 			<uri>urn:com:ten60:netkernel:mod:architecture</uri>
 		</import>
-
 		<import>
 		  <uri>urn:org:netkernel:ext:layer1</uri>
 		</import>
