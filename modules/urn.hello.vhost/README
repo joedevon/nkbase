@@ -1,1 +1,5 @@
-This is just a draft. I got hello world to work, but I'm not totally happy with it yet. Check back soon.
+This module is a hello world on how to set up Netkernel as your webserver. It uses a different port. Once you got this code in your Netkernel modules directory, you need to edit your hosts file (usually located in /etc/hosts) and add the following:
+
+127.0.0.1	hello-vhost.com
+
+then you can test it worked by going to http://hello-vhost.com:8081
