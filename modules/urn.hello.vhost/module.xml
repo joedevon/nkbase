@@ -46,7 +46,7 @@
 								<identifier>res:[[arg:path]]</identifier>
 								<representation>org.netkernel.layer0.representation.IBinaryStreamRepresentation</representation>
 							</request>
-							<import-type>hello-vhost.com</import-type>
+							<import-type>vhost</import-type>
 						</host>	
 
 					</config>
