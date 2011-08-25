@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="2.0">
+
+   <meta>
+      <identity>
+         <uri>urn:hello:vhost</uri>
+         <version>1.0.0</version>
+      </identity>
+      <info>
+         <name>hello vhost</name>
+         <description>Let's create a virtual host</description>
+      </info>
+   </meta>
+
+   <system>
+		<!-- allow the module to redeploy if changes are detected -->
+		<dynamic/>
+   </system>
+
+   <rootspace>
+		<!-- create the HTTP transport -->
+		<endpoint>
+			<prototype>HTTPTransport</prototype>
+			<config>res:/etc/HTTPServerConfig.xml</config>
+		</endpoint>
+
+		<!-- map the HTTP transport configuration resource to the filesystem -->
+		<fileset>
+			<glob>etc/HTTPServerConfig.xml</glob>
+		</fileset>
+
+		<!-- pass HTTP requests through the bridge to map http requests into ROC address-space -->
+		<overlay>
+			<prototype>HTTPBridge</prototype>
+			<space>
+				<overlay>
+					<prototype>VirtualHost</prototype>
+					<config>
+						
+						<!-- 1st host! -->
+						<host>
+    						<grammar>hello-vhost.com
+								<group name="path"><regex>.*</regex></group>
+							</grammar>
+							<request>
+								<identifier>res:[[arg:path]]</identifier>
+								<representation>org.netkernel.layer0.representation.IBinaryStreamRepresentation</representation>
+							</request>
+							<import-type>hello-vhost.com</import-type>
+						</host>	
+
+					</config>
+				</overlay>
+				
+				<!-- fallback 404 for all other domains (if they get through) -->
+				<mapper>
+					<config>
+						<endpoint>
+							<grammar><regex>https?:.*</regex></grammar>
+							<request><identifier>res:/404.html</identifier></request>
+							<header name="httpResponse:/code">404</header>
+						</endpoint>
+					</config>
+					<space name="Fallback Host Space">
+						<fileset>
+							<glob>notfound.html</glob>
+						</fileset>
+					</space>
+				</mapper>
+				
+			</space>
+		</overlay>
+		
+		<!-- import HTTP module so that transport prototype is available -->
+		<import>
+			<uri>urn:org:netkernel:tpt:http</uri>
+		</import>
+		<import>
+			<uri>urn:com:ten60:netkernel:mod:architecture</uri>
+		</import>
+
+		<import>
+		  <uri>urn:org:netkernel:ext:layer1</uri>
+		</import>
+		<import>
+			<uri>urn:org:netkernel:xml:core</uri>
+		</import>
+	</rootspace>
+	<rootspace name="vhost1 space" public="true">
+		
+		<!-- specify hook to make this space used by virtual host 1 -->
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost1/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
+		
+		<!-- other resource exposed in host 1 here -->
+		<mapper>
+			<config>
+				<endpoint>
+					<grammar><regex>res:/?</regex></grammar>
+					<request><identifier>res:/vhost1/index.html</identifier></request>
+				</endpoint>
+				<endpoint>
+					<grammar><regex>res:/jsexample</regex></grammar>
+					<request>
+						<identifier>active:javascript</identifier>
+						<argument name="operator">res:/vhost1/jsexample.js</argument>
+					</request>
+				</endpoint>
+			</config>
+			<space>
+				<fileset>
+					<glob>vhost1/*</glob>
+				</fileset>
+				<import>
+					<uri>urn:org:netkernel:lang:javascript</uri>
+				</import>
+			</space>
+		</mapper>
+		
+	</rootspace>
+	
+	<rootspace name="vhost2 space" public="true">
+		
+		<!-- specify hook to make this space used by virtual host 2 -->
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost2/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
+		
+		<!-- other resource exposed in host 2 here -->
+		<mapper>
+			<config>
+				<endpoint>
+					<grammar><regex>res:/?</regex></grammar>
+					<request><identifier>res:/vhost2/index.html</identifier></request>
+				</endpoint>
+			</config>
+			<space>
+				<fileset>
+					<glob>vhost2/*</glob>
+				</fileset>
+			</space>
+		</mapper>
+		
+	</rootspace>
+</module>
