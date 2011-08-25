@@ -1,18 +1,3 @@
-
-req = context.createRequest("active:freemarker");
-req.addArgumentByValue("operator", 'Input value: ${value}');
-req.addArgumentByValue("value", value.toString());
-req.setRepresentationClass(String.class);
-result = context.issueRequest(req);
-
-context.createResponseFrom(result);
-
-msg = context.formatRaw("Groovy example running with input %1",value);
-context.logRaw(org.netkernel.layer0.nkf.INKFLocale.LEVEL_INFO,msg);
-
-
-
-
 // Explicitly SOURCE for a String.class representation - this will coerce
 // any argument to find an X-to-String transreptor (if this is possible).
 // If it's already a string then you're good to go...
@@ -20,9 +5,8 @@ value = context.source("arg:value", String.class);
 
 result="""Input value: $value""";
 
-//Note explicitly do toString() on the GroovyString "result" to ensure we're not
-//"leaking" groovy-specific resource representations to other parts of our app
+// Note explicitly do toString() on the GroovyString "result" to ensure we're not
+// "leaking" groovy-specific resource representations to other parts of our app
 context.createResponseFrom(result.toString());
 
-//Can do this all in one step
 context.logFormatted(context.LEVEL_INFO, "Groovy example running with input %1",value);
