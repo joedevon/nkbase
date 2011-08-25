@@ -15,3 +15,4 @@ is explained here:
 http://localhost:1060/book/view/book:guide:logicalreference/doc:logicalreference:module:standard:logical
 
 *NOTE: The end of the groovy script is logging the input value. Some very cool AOP in Netkernel!
+*NOTE: I've removed FREEMARKER after some feedback from Peter Rodgers who gave me better code :)
