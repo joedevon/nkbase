@@ -38,7 +38,7 @@
 					<config>
 
 						<host>
-    						<grammar>http://hello-vhost.com
+    						<grammar>http://hello-vhost.com<optional>:<regex type="integer"/></optional>
 								<group name="path"><regex>.*</regex></group>
 							</grammar>
 							<request>
