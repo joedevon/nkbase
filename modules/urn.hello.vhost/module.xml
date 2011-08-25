@@ -51,22 +51,6 @@
 					</config>
 				</overlay>
 
-				<!-- fallback 404 for all other domains (if they get through) -->
-				<mapper>
-					<config>
-						<endpoint>
-							<grammar><regex>https?:.*</regex></grammar>
-							<request><identifier>res:/404.html</identifier></request>
-							<header name="httpResponse:/code">404</header>
-						</endpoint>
-					</config>
-					<space name="Fallback Host Space">
-						<fileset>
-							<glob>404.html</glob>
-						</fileset>
-					</space>
-				</mapper>
-
 			</space>
 		</overlay>
 
@@ -87,13 +71,24 @@
 	</rootspace>
 
 	<rootspace name="vhost space" public="true">
+		<!-- specify hook to make this space used by virtual host 1 -->
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
 		<mapper>
 			<config>
 				<endpoint>
 					<grammar><regex>res:/?</regex></grammar>
-					<request><identifier>res:index.html</identifier></request>
+					<request><identifier>res:/vhost/index.html</identifier></request>
+
 				</endpoint>
 			</config>
+			<space>
+				<fileset>
+					<glob>vhost/*</glob>
+				</fileset>
+			</space>
 		</mapper>
 
 	</rootspace>
