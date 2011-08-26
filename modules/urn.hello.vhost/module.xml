@@ -69,7 +69,7 @@
 		</import>
 	</rootspace>
 
-	<rootspace name="blahvhost space" public="true">
+	<rootspace name="vhost space" public="true">
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
