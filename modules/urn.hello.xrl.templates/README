@@ -1,0 +1,3 @@
+This module is a sample idea of how to set up xrl templates in a logical manner. The vhost example is a pre-requisite for understanding this one. Do NOT have both modules active at the same time. They will conflict.
+
+You can test this module at http://hello-vhost.com:8081
