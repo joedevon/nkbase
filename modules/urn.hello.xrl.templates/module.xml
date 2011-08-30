@@ -95,7 +95,7 @@
 		</mapper>
 
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
-		<mapper>
+		<!-- <mapper>
 			<config>res:resources/endpoints/away/mapperConfig.xml</config>
 		</mapper>
 		<space>
@@ -106,6 +106,6 @@
 			<import>
 				<uri>urn:org:netkernel:lang:xrl</uri>
 			</import>
-		</space>
+		</space> -->
 	</rootspace>
 </module>
