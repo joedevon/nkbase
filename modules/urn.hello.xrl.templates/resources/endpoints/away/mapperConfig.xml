@@ -1,0 +1,83 @@
+<config>
+	<endpoint>
+		<id>away</id>
+		<grammar><regex>res:/away/?</regex></grammar>
+		<request>
+			<identifier>active:xrl2</identifier>
+			<argument name="template">xrl:away</argument>
+		</request>
+		<header name="mime">text/html</header>
+	</endpoint>
+	<endpoint>
+		<id>away-template</id>
+		<grammar>xrl:away</grammar>
+		<request>
+			<identifier>res:/resources/templates/away/template.xml</identifier>
+		</request>
+	</endpoint>
+
+	<!-- map head xrl to global dir -->
+	<endpoint>
+		<id>head-template</id>
+		<grammar>xrl:head</grammar>
+		<request>
+			<identifier>res:/resources/templates/global/head.xml</identifier>
+		</request>
+	</endpoint>
+
+	<!-- @TODO map local resources dynamically -->
+	<endpoint>
+		<id>local-title</id>
+		<grammar>local:title</grammar>
+		<request>
+			<identifier>res:/resources/templates/away/title.xml</identifier>
+		</request>
+	</endpoint>
+
+	<!-- @TODO move this shiite to a higher level so it's DRY -->
+	<!-- dynamic xrl -->
+	<endpoint>
+		<id>xrl-templates</id>
+		<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
+		<request>
+			<identifier>res:/resources/templates/[[arg:path]]</identifier>
+		</request>
+	</endpoint>
+
+	<!-- @TODO Move this shiite up a level!!! -->
+	<!-- map ico to assets directory -->
+	<endpoint>
+		<id>ico</id>
+		<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
+		<request>
+			<identifier>res:/resources/assets/[[arg:path]]</identifier>
+		</request>
+		<header name="mime">image/x-icon</header>
+	</endpoint>
+	<!-- map images to assets directory -->
+	<endpoint>
+		<id>images</id>
+		<grammar>res:/images/<group name="path"><regex type="anything"/></group></grammar>
+		<request>
+			<identifier>res:/resources/assets/[[arg:path]]</identifier>
+		</request>
+	</endpoint>
+	<!-- map scripts to js directory -->
+	<endpoint>
+		<id>scripts</id>
+		<grammar>res:/scripts/<group name="path"><regex type="anything"/></group></grammar>
+		<request>
+			<identifier>res:/resources/js/[[arg:path]]</identifier>
+		</request>
+	</endpoint>
+	<!-- map stylesheets to css directory -->
+	<endpoint>
+		<id>stylesheets</id>
+		<grammar>res:/stylesheets/<group name="path"><regex type="anything"/></group></grammar>
+		<request>
+			<identifier>res:/resources/css/[[arg:path]]</identifier>
+		</request>
+	</endpoint>
+	<!-- map xrl resources to templates -->
+	
+</config>
