@@ -88,9 +88,9 @@
 					<uri>urn:org:netkernel:lang:xrl</uri>
 				</import>
 <!-- @todo is this import required?? -->
-<import>
+<!-- <import>
 	<uri>urn:org:netkernel:xml:core</uri>
-</import>
+</import> -->
 			</space>
 		</mapper>
 	</rootspace>
