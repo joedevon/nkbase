@@ -64,7 +64,6 @@
 		<import>
 		  <uri>urn:org:netkernel:ext:layer1</uri>
 		</import>
-		<!-- @TODO can the xrl be imported here and still work instead of below? -->
 		<import>
 			<uri>urn:org:netkernel:lang:xrl</uri>
 		</import>
