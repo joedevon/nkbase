@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="2.0">
+
+   <meta>
+      <identity>
+         <uri>urn:hello:xrl.templates</uri>
+         <version>1.0.0</version>
+      </identity>
+      <info>
+         <name>hello xrl templates</name>
+         <description>Let's set up some templates</description>
+      </info>
+   </meta>
+
+   <system>
+		<!-- allow the module to redeploy if changes are detected -->
+		<dynamic/>
+   </system>
+
+   <rootspace>
+		<!-- create the HTTP transport -->
+		<endpoint>
+			<prototype>HTTPTransport</prototype>
+			<config>res:/etc/HTTPServerConfig.xml</config>
+		</endpoint>
+
+		<!-- map the HTTP transport configuration resource to the filesystem -->
+		<fileset>
+			<glob>etc/HTTPServerConfig.xml</glob>
+		</fileset>
+
+		<!-- pass HTTP requests through the bridge to map http requests into ROC address-space -->
+		<overlay>
+			<prototype>HTTPBridge</prototype>
+			<space>
+				<overlay>
+					<prototype>VirtualHost</prototype>
+					<config>
+
+						<host>
+    						<grammar>http://hello-vhost.com<optional>:<regex type="integer"/></optional>
+								<group name="path"><regex>.*</regex></group>
+							</grammar>
+							<request>
+								<identifier>res:[[arg:path]]</identifier>
+									<representation>org.netkernel.layer0.representation.IBinaryStreamRepresentation</representation>
+							</request>
+							<import-type>vhost</import-type>
+						</host>
+
+					</config>
+				</overlay>
+
+			</space>
+		</overlay>
+
+		<!-- import HTTP module so that transport prototype is available -->
+		<import>
+			<uri>urn:org:netkernel:tpt:http</uri>
+		</import>
+		<import>
+			<uri>urn:com:ten60:netkernel:mod:architecture</uri>
+		</import>
+		<import>
+		  <uri>urn:org:netkernel:ext:layer1</uri>
+		</import>
+		<!-- @TODO can the xrl be imported here and still work instead of below? -->
+		<import>
+			<uri>urn:org:netkernel:xml:core</uri>
+		</import>
+	</rootspace>
+
+	<rootspace name="vhost space" public="true">
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
+		<!-- HOME -->
+		<mapper>
+			<!-- mapper config -->
+			<config>res:/resources/endpoints/home/mapperConfig.xml</config>
+			<space>
+				<fileset>
+					<!--File resources for the mapper config -->
+					<regex>res:/resources/.*</regex>
+				</fileset>
+				<import>
+					<uri>urn:org:netkernel:lang:xrl</uri>
+				</import>
+<!-- @todo is this import required?? -->
+<import>
+	<uri>urn:org:netkernel:xml:core</uri>
+</import>
+			</space>
+		</mapper>
+
+		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
+		<mapper>
+			<config>res:resources/endpoints/away/mapperConfig.xml</config>
+		</mapper>
+		<space>
+			<fileset>
+				<!-- @TODO do I need to repeat these or can mapperConfigs reside one after the other? -->
+				<regex>res:/resources/.*</regex>
+			</fileset>
+			<import>
+				<uri>urn:org:netkernel:lang:xrl</uri>
+			</import>
+		</space>
+	</rootspace>
+
+</module>
