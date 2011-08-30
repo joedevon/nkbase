@@ -2,6 +2,7 @@
 <html lang="en" xmlns:xrl="http://netkernel.org/xrl">
 	<xrl:include identifier="xrl:head"/>
 <body>
+	<h1>AWAY</h1>
 	<xrl:include identifier="xrl:body.xml"/>
 	<p>This part of the body is inline of template.xml</p>
 </body>
