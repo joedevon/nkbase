@@ -92,10 +92,10 @@
 	</rootspace>
 
 	<rootspace name="vhost away" public="true">
-		<!-- <fileset>
+		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset> -->
+		</fileset>
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
 		<mapper>
 			<config>res:/resources/endpoints/away/mapperConfig.xml</config>
