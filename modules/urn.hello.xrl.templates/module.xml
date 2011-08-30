@@ -79,6 +79,7 @@
 		<mapper>
 			<!-- mapper config -->
 			<config>res:/resources/endpoints/home/mapperConfig.xml</config>
+			<config>res:/resources/endpoints/away/mapperConfig.xml</config>
 			<space>
 				<fileset>
 					<!--File resources for the mapper config -->
