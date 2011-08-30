@@ -103,19 +103,19 @@
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
 		<mapper>
 			<config>res:resources/endpoints/away/mapperConfig.xml</config>
-		</mapper>
-		<space>
-			<fileset>
-				<regex>res:/resources/.*</regex>
-			</fileset>
-			<import>
-				<uri>urn:org:netkernel:lang:xrl</uri>
-			</import>
-<!-- @todo is this import required?? -->
-<import>
-	<uri>urn:org:netkernel:xml:core</uri>
-</import>
+			<space>
+				<fileset>
+					<regex>res:/resources/.*</regex>
+				</fileset>
+				<import>
+					<uri>urn:org:netkernel:lang:xrl</uri>
+				</import>
+	<!-- @todo is this import required?? -->
+	<import>
+		<uri>urn:org:netkernel:xml:core</uri>
+	</import>
 
-		</space>
+			</space>
+		</mapper>
 	</rootspace>
 </module>
