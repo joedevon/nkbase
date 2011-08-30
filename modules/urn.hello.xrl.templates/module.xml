@@ -96,13 +96,13 @@
 		</mapper>
 	</rootspace>
 
-	<rootspace name="vhost away" public="true">
+	<!-- <rootspace name="vhost away" public="true">
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset>
+		</fileset> -->
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
-		<mapper>
+		<!-- <mapper>
 			<config>res:/resources/endpoints/away/mapperConfig.xml</config>
 			<space>
 				<fileset>
@@ -110,13 +110,13 @@
 				</fileset>
 				<import>
 					<uri>urn:org:netkernel:lang:xrl</uri>
-				</import>
+				</import> -->
 	<!-- @todo is this import required?? -->
-	<import>
+	<!-- <import>
 		<uri>urn:org:netkernel:xml:core</uri>
 	</import>
 
 			</space>
 		</mapper>
-	</rootspace>
+	</rootspace> -->
 </module>
