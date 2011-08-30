@@ -66,6 +66,9 @@
 		</import>
 		<!-- @TODO can the xrl be imported here and still work instead of below? -->
 		<import>
+			<uri>urn:org:netkernel:lang:xrl</uri>
+		</import>
+		<import>
 			<uri>urn:org:netkernel:xml:core</uri>
 		</import>
 	</rootspace>
