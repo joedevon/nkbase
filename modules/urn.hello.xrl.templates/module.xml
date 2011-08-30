@@ -102,7 +102,7 @@
 		</fileset>
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
 		<mapper>
-			<config>res:resources/endpoints/away/mapperConfig.xml</config>
+			<config>res:/resources/endpoints/away/mapperConfig.xml</config>
 			<space>
 				<fileset>
 					<regex>res:/resources/.*</regex>
