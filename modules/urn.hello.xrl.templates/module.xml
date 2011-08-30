@@ -87,9 +87,9 @@
 					<!--File resources for the mapper config -->
 					<regex>res:/resources/.*</regex>
 				</fileset>
-				<import>
+				<!-- <import>
 					<uri>urn:org:netkernel:lang:xrl</uri>
-				</import>
+				</import> -->
 			</space>
 		</mapper>
 	</rootspace>
