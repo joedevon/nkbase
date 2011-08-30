@@ -16,13 +16,13 @@
 		</request>
 	</endpoint>
 	<!-- map head xrl to global dir -->
-	<endpoint>
+	<!-- <endpoint>
 		<id>head-template</id>
 		<grammar>xrl:head</grammar>
 		<request>
 			<identifier>res:/resources/templates/global/head.xml</identifier>
 		</request>
-	</endpoint>
+	</endpoint> -->
 
 	<!-- @TODO map local resources dynamically -->
 	<endpoint>
