@@ -3,7 +3,7 @@
 
    <meta>
       <identity>
-         <uri>urn:hello:xrl.templates</uri>
+         <uri>urn:hello:xrl:templates</uri>
          <version>1.0.0</version>
       </identity>
       <info>
