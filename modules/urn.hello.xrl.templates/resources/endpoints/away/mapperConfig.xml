@@ -4,13 +4,13 @@
 		<grammar><regex>res:/away/?</regex></grammar>
 		<request>
 			<identifier>active:xrl2</identifier>
-			<argument name="template">xrl:away</argument>
+			<argument name="template">xrl:awaytmpl</argument>
 		</request>
 		<header name="mime">text/html</header>
 	</endpoint>
 	<endpoint>
 		<id>away-template</id>
-		<grammar>xrl:away</grammar>
+		<grammar>xrl:awaytmpl</grammar>
 		<request>
 			<identifier>res:/resources/templates/away/template.xml</identifier>
 		</request>
