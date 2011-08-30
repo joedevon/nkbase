@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:xrl="http://netkernel.org/xrl">
-	<xrl:include identifier="xrl:head"/>
+	<xrl:include identifier="xrl:head.xml"/>
 <body>
 	<h1>HOME</h1>
 	<xrl:include identifier="xrl:body.xml"/>
