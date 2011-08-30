@@ -100,9 +100,9 @@
 		<mapper>
 			<config>res:/resources/endpoints/away/mapperConfig.xml</config>
 			<space>
-				<!-- <fileset>
+				<fileset>
 					<regex>res:/resources/.*</regex>
-				</fileset> -->
+				</fileset>
 			</space>
 		</mapper>
 	</rootspace>
