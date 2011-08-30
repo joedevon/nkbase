@@ -111,6 +111,11 @@
 			<import>
 				<uri>urn:org:netkernel:lang:xrl</uri>
 			</import>
+<!-- @todo is this import required?? -->
+<import>
+	<uri>urn:org:netkernel:xml:core</uri>
+</import>
+
 		</space>
 	</rootspace>
 </module>
