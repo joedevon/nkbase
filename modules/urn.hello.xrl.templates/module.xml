@@ -99,13 +99,13 @@
 			<config>res:resources/endpoints/away/mapperConfig.xml</config>
 		</mapper>
 		<space>
-			<fileset>
+			<fileset> -->
 				<!-- @TODO do I need to repeat these or can mapperConfigs reside one after the other? -->
 				<!-- <regex>res:/resources/.*</regex>
 			</fileset>
 			<import>
 				<uri>urn:org:netkernel:lang:xrl</uri>
 			</import>
-		</space> --> -->
+		</space> -->
 	</rootspace>
 </module>
