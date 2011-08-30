@@ -1,0 +1,8 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:xrl="http://netkernel.org/xrl">
+	<xrl:include identifier="xrl:head"/>
+<body>
+	<xrl:include identifier="xrl:body.xml"/>
+	<p>This part of the body is inline of template.xml</p>
+</body>
+</html>
