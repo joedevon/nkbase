@@ -70,7 +70,7 @@
 		</import>
 	</rootspace>
 
-	<rootspace name="vhost space" public="true">
+	<rootspace name="vhost home" public="true">
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
@@ -93,14 +93,19 @@
 </import>
 			</space>
 		</mapper>
+	</rootspace>
 
+	<rootspace name="vhost away" public="true">
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
 		<!-- "AWAY" (just another sample url eg hello-vhost.com/away) -->
 		<mapper>
 			<config>res:resources/endpoints/away/mapperConfig.xml</config>
 		</mapper>
 		<space>
 			<fileset>
-				<!-- @TODO do I need to repeat these or can mapperConfigs reside one after the other? -->
 				<regex>res:/resources/.*</regex>
 			</fileset>
 			<import>
