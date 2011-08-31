@@ -83,7 +83,6 @@
 					<id>ico</id>
 					<grammar>res:/favicon.ico</grammar>
 					<request>
-						<!-- <identifier>res:/resources/assets/[[arg:path]]</identifier> -->
 						<identifier>res:/resources/assets/favicon.ico</identifier>
 					</request>
 					<header name="mime">image/x-icon</header>
