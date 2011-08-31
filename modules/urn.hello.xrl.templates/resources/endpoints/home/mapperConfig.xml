@@ -8,6 +8,7 @@
 		</request>
 		<header name="mime">text/html</header>
 	</endpoint>
+
 	<endpoint>
 		<id>home-template</id>
 		<grammar>xrl:home</grammar>
