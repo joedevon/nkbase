@@ -73,10 +73,6 @@
 	</rootspace>
 
 	<rootspace>
-		<!-- <fileset>
-			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
-			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset> -->
 		<mapper>
 			<config>
 				<endpoint>
