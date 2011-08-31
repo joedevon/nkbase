@@ -35,24 +35,5 @@
 			<identifier>res:/resources/templates/global/[[arg:path]]</identifier>
 		</request>
 	</endpoint>
-
-	<!-- @TODO Move this shiite up a level!!! -->
-	<!-- map scripts to js directory -->
-	<endpoint>
-		<id>scripts</id>
-		<grammar>res:/scripts/<group name="path"><regex type="anything"/></group></grammar>
-		<request>
-			<identifier>res:/resources/js/[[arg:path]]</identifier>
-		</request>
-	</endpoint>
-	<!-- map stylesheets to css directory -->
-	<endpoint>
-		<id>stylesheets</id>
-		<grammar>res:/stylesheets/<group name="path"><regex type="anything"/></group></grammar>
-		<request>
-			<identifier>res:/resources/css/[[arg:path]]</identifier>
-		</request>
-	</endpoint>
-	<!-- map xrl resources to templates -->
 	
 </config>
