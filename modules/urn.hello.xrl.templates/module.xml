@@ -105,7 +105,8 @@
 			</space>
 		</mapper>
 	</rootspace>
-	
+
+	<!-- map public resources here -->
 	<rootspace>
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
