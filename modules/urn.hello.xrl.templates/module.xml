@@ -105,4 +105,16 @@
 			</space>
 		</mapper>
 	</rootspace>
+
+	<rootspace>
+		<endpoint>
+			<id>ico</id>
+			<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
+			<request>
+				<identifier>res:/resources/assets/[[arg:path]]</identifier>
+			</request>
+			<header name="mime">image/x-icon</header>
+		</endpoint>
+	</rootspace>
+
 </module>
