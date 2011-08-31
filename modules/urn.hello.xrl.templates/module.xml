@@ -107,6 +107,10 @@
 	</rootspace>
 
 	<rootspace>
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
 		<endpoint>
 			<id>ico</id>
 			<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
