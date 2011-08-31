@@ -28,13 +28,13 @@
 
 	<!-- @TODO move this shiite to a higher level so it's DRY -->
 	<!-- dynamic xrl -->
-	<!-- <endpoint>
+	<endpoint>
 		<id>xrl-templates</id>
 		<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
 		<request>
 			<identifier>res:/resources/templates/global/[[arg:path]]</identifier>
 		</request>
-	</endpoint> -->
+	</endpoint>
 
 	<!-- @TODO Move this shiite up a level!!! -->
 	<!-- map ico to assets directory -->
