@@ -37,15 +37,6 @@
 	</endpoint>
 
 	<!-- @TODO Move this shiite up a level!!! -->
-	<!-- map ico to assets directory -->
-	<!-- <endpoint>
-		<id>ico</id>
-		<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
-		<request>
-			<identifier>res:/resources/assets/[[arg:path]]</identifier>
-		</request>
-		<header name="mime">image/x-icon</header>
-	</endpoint> -->
 	<!-- map images to assets directory -->
 	<endpoint>
 		<id>images</id>
