@@ -108,6 +108,10 @@
 
 	<!-- map global resources globally -->
 	<rootspace>
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
 		<endpoint>
 			<id>xrl-templates</id>
 			<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
