@@ -81,9 +81,10 @@
 			<config>
 				<endpoint>
 					<id>ico</id>
-					<grammar>res:/<group name="path"><regex>.*.ico</regex></group></grammar>
+					<grammar>res:/favicon.ico</grammar>
 					<request>
-						<identifier>res:/resources/assets/[[arg:path]]</identifier>
+						<!-- <identifier>res:/resources/assets/[[arg:path]]</identifier> -->
+						<identifier>res:/resources/assets/favicon.ico</identifier>
 					</request>
 					<header name="mime">image/x-icon</header>
 				</endpoint>
