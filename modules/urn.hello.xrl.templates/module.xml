@@ -105,8 +105,7 @@
 			</space>
 		</mapper>
 	</rootspace>
-
-	<!-- favicon -->
+	
 	<rootspace>
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
@@ -114,6 +113,7 @@
 		</fileset>
 		<mapper>
 			<config>
+				<!-- favicon -->
 				<endpoint>
 					<id>ico</id>
 					<grammar>res:/favicon.ico</grammar>
@@ -122,6 +122,7 @@
 					</request>
 					<header name="mime">image/x-icon</header>
 				</endpoint>
+
 				<!-- map images to assets directory -->
 				<endpoint>
 					<id>images</id>
@@ -130,10 +131,37 @@
 						<identifier>res:/resources/assets/[[arg:path]]</identifier>
 					</request>
 				</endpoint>
+
+				<!-- map scripts to js directory -->
+				<endpoint>
+					<id>scripts</id>
+					<grammar>res:/scripts/<group name="path"><regex type="anything"/></group></grammar>
+					<request>
+						<identifier>res:/resources/js/[[arg:path]]</identifier>
+					</request>
+				</endpoint>
+
+				<!-- map stylesheets to css directory -->
+				<endpoint>
+					<id>stylesheets</id>
+					<grammar>res:/stylesheets/<group name="path"><regex type="anything"/></group></grammar>
+					<request>
+						<identifier>res:/resources/css/[[arg:path]]</identifier>
+					</request>
+				</endpoint>
+
+				<endpoint>
+					<id>xrl-templates</id>
+					<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
+					<request>
+<identifier>res:/resources/templates/global/[[arg:path]]</identifier>
+					</request>
+				</endpoint>
+
 			</config>
 			<space>
 				<fileset>
-					<glob>resources/assets/*</glob>
+					<glob>resources/*</glob>
 				</fileset>
 			</space>
 		</mapper>
