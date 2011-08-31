@@ -122,6 +122,14 @@
 					</request>
 					<header name="mime">image/x-icon</header>
 				</endpoint>
+				<!-- map images to assets directory -->
+				<endpoint>
+					<id>images</id>
+					<grammar>res:/images/<group name="path"><regex type="anything"/></group></grammar>
+					<request>
+						<identifier>res:/resources/assets/[[arg:path]]</identifier>
+					</request>
+				</endpoint>
 			</config>
 			<space>
 				<fileset>
