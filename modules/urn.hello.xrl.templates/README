@@ -9,5 +9,6 @@ The goal here was to create two pages to this sample app. "Home" and "Away". I w
 @TODO I'd like to move the dynamic call to xrl resources up to the module.xml so that I don't have to redefine it in the mapperConfig.xml each time. It probably isn't working because I need the right syntax to make it active:xrl.
 
 P.S. Forgot to mention the stylesheets are based off of Skeleton, an HTML5 css framework I like. I had to remove a few things to get it to work with xrl.
+
 http://www.getskeleton.com/
 https://github.com/dhgamache/Skeleton/
