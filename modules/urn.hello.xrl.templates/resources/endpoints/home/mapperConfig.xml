@@ -1,4 +1,5 @@
 <config>
+
 	<endpoint>
 		<id>homepage</id>
 		<grammar><regex>res:/?</regex></grammar>
