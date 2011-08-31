@@ -72,6 +72,31 @@
 		</import>
 	</rootspace>
 
+	<rootspace>
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
+		<mapper>
+			<config>
+				<endpoint>
+					<id>ico</id>
+					<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
+					<request>
+						<identifier>res:/resources/assets/[[arg:path]]</identifier>
+					</request>
+					<header name="mime">image/x-icon</header>
+				</endpoint>
+			</config>
+			<space>
+				<fileset>
+					<glob>resources/assets/*</glob>
+				</fileset>
+			</space>
+		</mapper>
+	</rootspace>
+
+
 	<rootspace name="vhost home" public="true">
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
@@ -106,28 +131,5 @@
 		</mapper>
 	</rootspace>
 
-	<rootspace>
-		<fileset>
-			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
-			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset>
-		<mapper>
-			<config>
-				<endpoint>
-					<id>ico</id>
-					<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
-					<request>
-						<identifier>res:/resources/assets/[[arg:path]]</identifier>
-					</request>
-					<header name="mime">image/x-icon</header>
-				</endpoint>
-			</config>
-			<space>
-				<fileset>
-					<glob>resources/assets/*</glob>
-				</fileset>
-			</space>
-		</mapper>
-	</rootspace>
 
 </module>
