@@ -78,7 +78,7 @@
 			<config>
 				<endpoint>
 					<grammar><regex>res:/?</regex></grammar>
-					<request><identifier>res:/vhost/index.html</identifier></request>
+<request><identifier>res:/vhost/index.html</identifier></request>
 				</endpoint>
 			</config>
 			<space>
