@@ -15,16 +15,9 @@
 			<identifier>res:/resources/templates/home/template.xml</identifier>
 		</request>
 	</endpoint>
-	<!-- map head xrl to global dir -->
-	<!-- <endpoint>
-		<id>head-template</id>
-		<grammar>xrl:head</grammar>
-		<request>
-			<identifier>res:/resources/templates/global/head.xml</identifier>
-		</request>
-	</endpoint> -->
 
-	<!-- @TODO map local resources dynamically -->
+	<!-- Map local resources dynamically -->
+	<!-- @TODO make this actually work! -->
 	<endpoint>
 		<id>local-title</id>
 		<grammar>local:title</grammar>
