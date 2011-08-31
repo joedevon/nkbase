@@ -26,7 +26,7 @@
 		</request>
 	</endpoint>
 
-	<!-- @TODO move this shiite to a higher level so it's DRY -->
+	<!-- @TODO move this to a higher level so it's DRY -->
 	<!-- dynamic xrl -->
 	<endpoint>
 		<id>xrl-templates</id>
