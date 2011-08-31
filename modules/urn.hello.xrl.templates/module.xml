@@ -150,6 +150,7 @@
 					</request>
 				</endpoint>
 
+				<!-- @TODO trying to get below to work instead of having it in mapperConfig.xml. Just need to know the syntax -->
 				<!-- <endpoint>
 					<id>xrl-templates</id>
 					<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
