@@ -81,7 +81,7 @@
 			<config>
 				<endpoint>
 					<id>ico</id>
-					<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
+					<grammar>res:/<group name="path"><regex>.*.ico</regex></group></grammar>
 					<request>
 						<identifier>res:/resources/assets/[[arg:path]]</identifier>
 					</request>
