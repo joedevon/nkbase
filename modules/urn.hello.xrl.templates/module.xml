@@ -88,6 +88,13 @@
 				</fileset>
 			</space>
 		</mapper>
+		<endpoint>
+			<id>xrl-templates</id>
+			<grammar>xrl:<group name="path"><regex type="anything"/></group></grammar>
+			<request>
+<identifier>res:/resources/templates/global/[[arg:path]]</identifier>
+			</request>
+		</endpoint>
 	</rootspace>
 
 	<rootspace name="vhost away" public="true">
