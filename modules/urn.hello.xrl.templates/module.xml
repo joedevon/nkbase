@@ -111,14 +111,41 @@
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
 		</fileset>
-		<endpoint>
-			<id>ico</id>
-			<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
-			<request>
-				<identifier>res:/resources/assets/[[arg:path]]</identifier>
-			</request>
-			<header name="mime">image/x-icon</header>
-		</endpoint>
+		<mapper>
+			<config>
+				<endpoint>
+					<id>ico</id>
+					<grammar>res:/images/<group name="path"><regex>.*.ico</regex></group></grammar>
+					<request>
+						<identifier>res:/resources/assets/[[arg:path]]</identifier>
+					</request>
+					<header name="mime">image/x-icon</header>
+				</endpoint>
+			</config>
+		</mapper>
 	</rootspace>
+
+
+
+
+
+
+
+		<mapper>
+			<config>
+				<endpoint>
+					<grammar><regex>res:/?</regex></grammar>
+<request><identifier>res:/vhost/index.html</identifier></request>
+				</endpoint>
+			</config>
+			<space>
+				<fileset>
+					<glob>vhost/*</glob>
+				</fileset>
+			</space>
+		</mapper>
+
+
+
 
 </module>
