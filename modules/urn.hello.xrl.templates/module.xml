@@ -73,10 +73,10 @@
 	</rootspace>
 
 	<rootspace>
-		<fileset>
+		<!-- <fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
 			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset>
+		</fileset> -->
 		<mapper>
 			<config>
 				<endpoint>
@@ -88,11 +88,11 @@
 					<header name="mime">image/x-icon</header>
 				</endpoint>
 			</config>
-			<!-- <space>
+			<space>
 				<fileset>
 					<glob>resources/assets/*</glob>
 				</fileset>
-			</space> -->
+			</space>
 		</mapper>
 	</rootspace>
 
