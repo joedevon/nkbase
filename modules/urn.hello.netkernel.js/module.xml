@@ -135,11 +135,9 @@
 				<fileset>
 					<regex>res:/resources/.*</regex>
 				</fileset>
-				<space>
-					<fileset>
-						<glob>vhost/*</glob>
-					</fileset>
-				</space>
+				<fileset>
+					<glob>vhost/*</glob>
+				</fileset>
 				<import>
 					<uri>urn:org:netkernel:lang:javascript</uri>
 					<private/>
