@@ -7,7 +7,7 @@
 		</identity>
 		<info>
 			<name>Demo / NetKernel.js</name>
-			<description>demo of server-side javascript w/ XRL on NetKernel</description>
+			<description>Demo of server-side javascript w/ XRL on NetKernel</description>
 		</info>
 	</meta>
 
@@ -64,6 +64,27 @@
 		</import>
 	</rootspace>
 
+	<rootspace name="vhost space" public="true">
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
+		</fileset>
+		<mapper>
+			<config>
+				<endpoint>
+					<grammar><regex>res:/?</regex></grammar>
+<request><identifier>res:/vhost/index.html</identifier></request>
+				</endpoint>
+			</config>
+			<space>
+				<fileset>
+					<glob>vhost/*</glob>
+				</fileset>
+			</space>
+		</mapper>
+	</rootspace>
+
+
 	<rootspace>
 		<fileset>
 			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
@@ -114,6 +135,11 @@
 				<fileset>
 					<regex>res:/resources/.*</regex>
 				</fileset>
+				<space>
+					<fileset>
+						<glob>vhost/*</glob>
+					</fileset>
+				</space>
 				<import>
 					<uri>urn:org:netkernel:lang:javascript</uri>
 					<private/>
