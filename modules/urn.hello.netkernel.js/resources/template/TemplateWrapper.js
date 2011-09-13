@@ -1,9 +1,9 @@
 // delete this line...just curious what the NK context object contains
-document.write(context);
+// document.write(context);
 
 responseIn = context.sourceForResponse("arg:response");
 // delete
-document.write(response.In);
+// document.write(response.In);
 
 mime = responseIn.getHeader("mime");
 if (mime == "application/xml") {
@@ -13,7 +13,7 @@ if (mime == "application/xml") {
 	    org.w3c.dom.Document
 	);
 // delete
-document.write(content);
+// document.write(content);
 
 	//determine page title from XPath
 	var pageTitleAttr;
@@ -22,7 +22,7 @@ document.write(content);
 	    "/*/@page-title"
 	);
 // delete
-document.write(pageTitleAttr);
+// document.write(pageTitleAttr);
 	if (pageTitleAttr) {
 	    title = pageTitleAttr.getNodeValue();
 	} else {
