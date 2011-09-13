@@ -30,7 +30,7 @@ document.write(pageTitleAttr);
 	}
 
 	req = context.createRequest("active:xrl2");
-	req.addArgument("template","res:/resources/template/master.xml");
+	req.addArgument("template","res:/resources/template/global/master.xml");
 	req.addArgumentByValue("title",title);
 	req.addArgumentByValue("content",content);
 	wrappedContent=context.issueRequestForResponse(req);
