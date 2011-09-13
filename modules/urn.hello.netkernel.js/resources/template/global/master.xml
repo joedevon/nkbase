@@ -31,8 +31,8 @@
 	</head>
 	
 	<body>
-		<h1 xrl:eval="text">arg:h1</h1>
-		This is a global template using the <a href="http://martinfowler.com/eaaCatalog/twoStepView.html">2-step view pattern</a>. This will appear on each page of the site with the title and content dynamically inserted.
 		<xrl:include identifier="arg:content"/>
+		<p>This is a global template using the <a href="http://martinfowler.com/eaaCatalog/twoStepView.html">2-step view pattern</a>. This will appear on each page of the site with the title and content dynamically inserted.</p>
+
 	</body>
 </html>
