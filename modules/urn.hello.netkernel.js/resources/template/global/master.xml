@@ -34,7 +34,9 @@
 		<div class="container">
 			<xrl:include identifier="arg:content"/>
 		</div>
-		<p>This is a global template using the <a href="http://martinfowler.com/eaaCatalog/twoStepView.html">2-step view pattern</a>. This will appear on each page of the site with the title and content dynamically inserted.</p>
+		<div class="sixteen columns">
+			<p>This is a global template using the <a href="http://martinfowler.com/eaaCatalog/twoStepView.html">2-step view pattern</a>. This will appear on each page of the site with the title and content dynamically inserted.</p>
+		</div>
 
 	<!-- JS
 	================================================== -->
