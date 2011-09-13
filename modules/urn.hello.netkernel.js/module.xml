@@ -101,7 +101,7 @@
 						<endpoint>
 							<grammar>res:/<regex>(js|css)/</regex><group name="path"><regex>.*\.(css|js)</regex></group></grammar>
 							<request>
-								<identifier>res:/resources/assets/[[arg:path]]</identifier>
+								<identifier>res:/resources/pub/[[arg:path]]</identifier>
 							</request>
 						</endpoint>
 					</config>
