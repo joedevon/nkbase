@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="2.0">
+	<meta>
+		<identity>
+			<uri>urn:hello:netkernel:js</uri>
+			<version>0.1.0</version>
+		</identity>
+		<info>
+			<name>Demo / NetKernel.js</name>
+			<description>demo of server-side javascript w/ XRL on NetKernel</description>
+		</info>
+	</meta>
+	<system>
+		<!-- allow the module to redeploy if changes are detected -->
+		<dynamic/>
+	</system>
+	<rootspace>
+		<!-- specify hook to make this space appear on http port 8080 -->
+		<fileset>
+			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
+		</fileset>
+		<pluggable-overlay>
+			<postProcess>
+				<identifier>active:javascript</identifier>
+				<argument name="operator">res:/resources/template/TemplateWrapper.js</argument>
+				<argument name="response">arg:response</argument>
+			</postProcess>
+			<space>
+				<mapper>
+					<config>
+						<endpoint>
+							<grammar>res:/xrldemo/</grammar>
+							<request>
+								<identifier>res:/resources/home/index.xml</identifier>
+							</request>
+						</endpoint>
+						<endpoint>
+							<grammar>res:/xrldemo/<group name="path">img/<regex>.*\.png</regex></group></grammar>
+							<request>
+								<identifier>res:/resources/[[arg:path]]</identifier>
+							</request>
+						</endpoint>
+					</config>
+					<space>
+						<fileset>
+							<regex>res:/resources/.*</regex>
+						</fileset>
+					</space>
+				</mapper>
+				<fileset>
+					<regex>res:/resources/.*</regex>
+				</fileset>
+				<import>
+					<uri>urn:org:netkernel:lang:javascript</uri>
+					<private/>
+				</import>
+				<import>
+					<uri>urn:org:netkernel:lang:xrl</uri>
+					<private/>
+				</import>
+			</space>
+		</pluggable-overlay>
+	</rootspace>
+</module>
