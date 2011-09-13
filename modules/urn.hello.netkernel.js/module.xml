@@ -91,6 +91,12 @@
 										<identifier>res:/resources/template/blog/index.xml</identifier>
 							</request>
 						</endpoint>
+						<endpoint>
+							<grammar>res:/skeleton<regex>/?</regex></grammar>
+							<request>
+										<identifier>res:/resources/template/skeleton/index.xml</identifier>
+							</request>
+						</endpoint>
 						<!-- map images to physical resource -->
 						<endpoint>
 							<grammar>res:/img/<group name="path"><regex>.*\.(png|ico|gif)</regex></group></grammar>
