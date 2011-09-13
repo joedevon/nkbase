@@ -10,10 +10,10 @@ Once you find it add this:
 
 127.0.0.1	netkernel-js.com
 
-When your code is up and running you should be able to get your page showing at this url:
+When your code is in place you should be able to get your page showing at this url:
 http://netkernel-js.com:8081
 
-I'm still going with the Skeleton css Framework:
+I'm still using the Skeleton css Framework:
 
 http://www.getskeleton.com/
 https://github.com/dhgamache/Skeleton/
