@@ -22,7 +22,6 @@
 			<prototype>HTTPTransport</prototype>
 			<config>res:/etc/HTTPServerConfig.xml</config>
 		</endpoint>
-
 		<!-- map the HTTP transport configuration resource to the filesystem -->
 		<fileset>
 			<glob>etc/HTTPServerConfig.xml</glob>
