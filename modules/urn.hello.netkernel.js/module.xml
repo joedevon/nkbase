@@ -64,26 +64,6 @@
 		</import>
 	</rootspace>
 
-	<rootspace name="vhost space" public="true">
-		<fileset>
-			<regex>res:/etc/system/SimpleDynamicImportHook.xml</regex>
-			<rewrite>res:/vhost/SimpleDynamicImportHook.xml</rewrite>
-		</fileset>
-		<mapper>
-			<config>
-				<endpoint>
-					<grammar><regex>res:/?</regex></grammar>
-<request><identifier>res:/vhost/index.html</identifier></request>
-				</endpoint>
-			</config>
-			<space>
-				<fileset>
-					<glob>vhost/*</glob>
-				</fileset>
-			</space>
-		</mapper>
-	</rootspace>
-
 
 	<rootspace>
 		<fileset>
