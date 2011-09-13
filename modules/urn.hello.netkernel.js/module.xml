@@ -10,10 +10,12 @@
 			<description>demo of server-side javascript w/ XRL on NetKernel</description>
 		</info>
 	</meta>
+
 	<system>
 		<!-- allow the module to redeploy if changes are detected -->
 		<dynamic/>
 	</system>
+
 	<rootspace>
 		<!-- specify hook to make this space appear on http port 8080 -->
 		<fileset>
