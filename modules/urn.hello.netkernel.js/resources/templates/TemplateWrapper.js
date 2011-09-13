@@ -2,6 +2,7 @@
 document.write(context);
 
 responseIn = context.sourceForResponse("arg:response");
+// delete
 document.write(response.In);
 
 mime = responseIn.getHeader("mime");
@@ -11,6 +12,8 @@ if (mime == "application/xml") {
 	    responseIn.getRepresentation(),
 	    org.w3c.dom.Document
 	);
+//delete
+document.write(content);
 
 	//determine page title
 	var pageTitleAttr;
