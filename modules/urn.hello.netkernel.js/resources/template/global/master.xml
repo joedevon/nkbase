@@ -5,7 +5,7 @@
 	</head>
 	
 	<body>
-		This is a global template using the 2-step layout design pattern. (At least I think it technically is, though never read the actual definition of it). This will appear on each page of the site with the title and content dynamically inserted.
+		This is a global template using the 2-step view pattern. (At least I think it technically is, though never read the actual definition of it). This will appear on each page of the site with the title and content dynamically inserted.
 		<xrl:include identifier="arg:content"/>
 	</body>
 </html>
