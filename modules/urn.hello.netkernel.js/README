@@ -19,5 +19,6 @@ http://www.getskeleton.com/
 https://github.com/dhgamache/Skeleton/
 
 Concept:
-I put global templates in template/global.
+I put global templates in /resources/template/global.
 Then the idea being that you'll have a homepage and a blog. They each need their own title injected into the header. So this is a proof of concept in mixing and matching templates like you'll need to do for many sites.
+Obviously the homepage templates are in /resources/template/home and the blog at /resources/template/blog
