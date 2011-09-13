@@ -100,7 +100,7 @@
 						</endpoint>
 						<!-- map css/js to physical resource -->
 						<endpoint>
-							<grammar>res:/<regex>(js|css)/</regex><group name="path"><regex>.*\.(css|js)</regex></group></grammar>
+							<grammar>res:/<group name="path"><regex>(js|css)/.*\.(css|js)</regex></group></grammar>
 							<request>
 								<identifier>res:/resources/pub/[[arg:path]]</identifier>
 							</request>
