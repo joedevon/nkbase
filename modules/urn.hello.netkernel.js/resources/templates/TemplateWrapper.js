@@ -15,14 +15,16 @@ if (mime == "application/xml") {
 //delete
 document.write(content);
 
-	//determine page title
+	//determine page title from XPath
 	var pageTitleAttr;
-	pageTitleAttr=org.netkernel.layer0.util.FastXPath.getSingleNode(content,"/*/@page-title");
-	if (pageTitleAttr)
-	{	title=pageTitleAttr.getNodeValue();
-	}
-	else
-	{	title="title unspecified";
+	pageTitleAttr = org.netkernel.layer0.util.FastXPath.getSingleNode(
+	    content,
+	    "/*/@page-title"
+	);
+	if (pageTitleAttr) {
+	    title=pageTitleAttr.getNodeValue();
+	} else {
+	    title="Untitled!";
 	}
 
 	req=context.createRequest("active:xrl2");
