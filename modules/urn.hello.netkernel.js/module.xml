@@ -81,13 +81,19 @@
 						<endpoint>
 							<grammar>res:/</grammar>
 							<request>
-								<identifier>res:/resources/home/index.xml</identifier>
+										<identifier>res:/resources/template/home/index.xml</identifier>
 							</request>
 						</endpoint>
 						<endpoint>
-							<grammar>res:/xrldemo/<group name="path">img/<regex>.*\.png</regex></group></grammar>
+							<grammar>res:/blog<regex>/?</regex></grammar>
 							<request>
-								<identifier>res:/resources/[[arg:path]]</identifier>
+										<identifier>res:/resources/template/blog/index.xml</identifier>
+							</request>
+						</endpoint>
+						<endpoint>
+							<grammar>res:/img/<group name="path"><regex>.*\.(png|ico|gif)</regex></group></grammar>
+							<request>
+								<identifier>res:/resources/assets/[[arg:path]]</identifier>
 							</request>
 						</endpoint>
 					</config>
