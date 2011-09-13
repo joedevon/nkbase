@@ -2,9 +2,36 @@
 <html lang="en" xmlns:xrl="http://netkernel.org/xrl">
 	<head>
 		<title xrl:eval="text">arg:title</title>
+
+		<!-- Basic Page Needs
+		 ================================================== -->
+		<meta charset="utf-8" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+		<!-- Mobile Specific Metas
+		 ================================================== -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+		<!-- CSS
+		 ================================================== -->
+		<link rel="stylesheet" href="stylesheets/base.css" />
+		<link rel="stylesheet" href="stylesheets/skeleton.css" />
+		<link rel="stylesheet" href="stylesheets/layout.css" />
+
+		<!-- Favicons
+		================================================== -->
+		<link rel="shortcut icon" href="img/favicon.ico" />
+		<link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+		<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png" />
+		<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png" />
 	</head>
 	
 	<body>
+		<h1 xrl:eval="text">arg:h1</h1>
 		This is a global template using the <a href="http://martinfowler.com/eaaCatalog/twoStepView.html">2-step view pattern</a>. This will appear on each page of the site with the title and content dynamically inserted.
 		<xrl:include identifier="arg:content"/>
 	</body>
