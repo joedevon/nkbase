@@ -1,0 +1,6 @@
+<div page-title="This is the homepage">
+	<h1>XRL Demo</h1>
+	<p>This image passes through the wrapper without being wrapped in a template because it isn't xml!
+	</p>
+	<img src="img/feedback.png"/>
+</div>
