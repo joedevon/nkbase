@@ -1,4 +1,4 @@
 <div page-title="Welcome to NetKernel.js's Blog!!">
 	<h1>This is the sample Blog Page</h1>
-	<p>All resources are passed through a javascript post-processor which is a proof of concept of javascript on the server-side. Image resources, such as <img src="img/apple-touch-icon.png"/> will bypass the wrapper, which checks for an xml mime-type.</p>
+	<p>All resources are passed through a javascript post-processor which is a proof of concept of javascript on the server-side. Image resources, such as <img src="img/apple-touch-icon.png" /> will bypass the wrapper, which checks for an xml mime-type.</p>
 </div>
