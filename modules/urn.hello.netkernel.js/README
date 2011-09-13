@@ -1,0 +1,15 @@
+Since my previous example, urn.hello.xrl.templates, was missing a bit of functionality, I asked the kind folks at NetKernel for some help, with a twist. I said make the example work with Javascript :)
+
+Obviously, Node is quite "hot" right now, so here's another way to use js on the server :) I'm going to unofficially dub it netkernel.js :)
+
+PREREQUISITE:
+Edit your hosts file, usually located in /etc/hosts but if not, look it up for your OS here:
+http://en.wikipedia.org/wiki/Hosts_(file)#Location_in_the_file_system
+
+Once you find it add this:
+
+127.0.0.1	netkernel-js.com
+
+When your code is up and running you should be able to get your page showing at this url:
+http://netkernel-js.com:8081
+
